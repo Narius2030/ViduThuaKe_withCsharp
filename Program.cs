@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,15 +11,32 @@ namespace Console1
     {
         static void Main(string[] args)
         {
+            //Kieu Buffalo, gan object Buffalo
             Buffalo b = new Buffalo("Trau", "an co, di cay", 450);
-            AnCo ac = new AnCo("Dear", 150, "an co");
-            Tiger t = new Tiger("Ho Chau Phi", "An thit, san moi", 500);
-            AnThit at = new AnThit("Ho Chau Phi", 500, "An thi, san moi");
+            Console.WriteLine(b.ToString() + "\n");
 
-            Console.WriteLine(b + "\n");
-            Console.WriteLine(ac + "\n");
-            Console.WriteLine(t + "\n");
-            Console.WriteLine(at);
+            //Kieu AnThit, gan object AnThit
+            AnThit a = new AnThit("Bao", 450, "an thit, di san");
+            Console.WriteLine(a.ToString() + "\n");
+
+            //Kieu AnCo NHUNG gan object Buffalo
+            AnCo c = new Buffalo("Bo sua", "an co", 400);
+            Console.WriteLine(c.ToString() + "\n");
+
+            //Hiding method TiengKeu()
+            AnCo ac = new Dear("Dear", "an co", 200);
+            Console.WriteLine("Tieng keu loai an co: " + "\n" + ac.TiengKeu() + "\n");
+
+            Dear d = new Dear("Dear", "an co", 150);
+            Console.WriteLine("Tieng keu loai Huou: " + "\n" + d.TiengKeu() + "\n");
+
+            //Overriding method TiengKeu()
+            AnThit at = new Tiger("Ho Chau A", "An thit, san moi", 455);
+            Console.WriteLine("Tieng keu loai an thit: " + "\n" + at.TiengKeu() + "\n");
+
+            Tiger t = new Tiger("Ho Chau Phi", "An thit, san moi", 500);
+            Console.WriteLine("Tieng keu loai Ho: " + "\n" + t.TiengKeu() + "\n");
+
             Console.ReadLine();
         }
     }
