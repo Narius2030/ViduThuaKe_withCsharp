@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,13 +31,9 @@ namespace Console1
         {
             return base.ToString() + "Tap tinh loai an thit: " + TaptinhT;
         }
-        public double CaNang()
-        {
-            return AvgWeigth;
-        }
         public override string TiengKeu()
         {
-            return "";
+            return "Tieng keu:..........";
         }
     }
 }
