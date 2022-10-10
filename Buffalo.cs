@@ -16,7 +16,7 @@ namespace Console1
         {
             return base.ToString() + "\n" + TiengKeu();
         }
-        public override string TiengKeu()
+        public new string TiengKeu()
         {
             return "Tieng keu: bruhhhh, bruhh....";
         }
