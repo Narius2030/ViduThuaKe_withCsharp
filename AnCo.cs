@@ -29,13 +29,9 @@ namespace Console1
         {
             return base.ToString() + "Tap tinh loai an co: " + TaptinhC;
         }
-        public double CanNang()
-        {
-            return AvgWeigth;
-        }
         public override string TiengKeu()
         {
-            return "";
+            return "Tieng keu:.........";
         }
     }
 }
